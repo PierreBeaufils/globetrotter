@@ -1,0 +1,9 @@
+@use 'src/styles/vars' as v;
+
+.login-container {
+  margin: 0 auto;
+  text-align: center;
+  max-width: v.$max-width;
+  background-color: v.$background-color;
+  padding: 1rem;
+}

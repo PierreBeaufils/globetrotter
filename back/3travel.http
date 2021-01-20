@@ -1,0 +1,160 @@
+//////////////////////////////////////////// ROUTES DE TRAVEL ////////////////////////////////////////////////////
+GET http://localhost:3000/v1/travels
+###
+GET http://localhost:3000/v1/travel/1
+###
+POST http://localhost:3000/v1/create-travel
+Content-Type: application/json
+
+{
+    "title": "TEST 2", 
+    "destination": "Czech Republic", 
+    "departure_date": "2020-06-21 20:17:03", 
+    "return_date": "2020-08-30 22:38:58", 
+    "owner": "25"
+}
+###
+PATCH  http://localhost:3000/v1/travel/31
+Content-Type: application/json
+
+{
+    "title": "PATCH", 
+    "destination": "Czech Republic", 
+    "departure_date": "2020-06-21 20:17:03", 
+    "return_date": "2020-08-30 22:38:58", 
+    "owner": "5"
+}
+###
+DELETE http://localhost:3000/v1/travel/31
+###
+
+//////////////////////////////////// ROUTES DE TRAVEL VERS ACCOMODATION///////////////////////////////////////////
+
+GET http://localhost:3000/v1/travel/2/accommodation
+###
+POST http://localhost:3000/v1/travel/2/accommodation
+Content-Type: application/json
+
+{
+  "name": "test",
+  "address": "adresse test post",
+  "city": "ville post",
+  "coordinate": "38.1483676,39.1483676",
+  "information": null,
+  "availability": null,
+  "arrival_date": "2020-05-24T05:12:58.000Z",
+  "departure_date": "2020-06-25T03:12:32.000Z",
+  "unit_price": "31.79",
+  "quantity": 9,
+  "selected": false
+}
+###
+PATCH http://localhost:3000/v1/travel/2/accommodation/32
+Content-Type: application/json
+
+{
+  "selected": true
+}
+###
+DELETE http://localhost:3000/v1/travel/2/accommodation/32
+###
+
+/////////////////////////////////////// ROUTES DE TRAVEL VERS ACTIVITY//////////////////////////////////////////////
+
+GET http://localhost:3000/v1/travel/2/activity
+###
+POST http://localhost:3000/v1/travel/2/activity
+Content-Type: application/json
+
+{
+  "name": "Activité TEST",
+  "topic": "Services",
+  "place": "886 Surrey Lane",
+  "coordinate": "49.7524226,53.7524226",
+  "duration": "35 minute",
+  "description": "Operative composite productivity",
+  "date": "2020-11-16T10:58:36.000Z",
+  "unit_price": "85.99",
+  "quantity": 4,
+  "selected": false
+}
+###
+PATCH http://localhost:3000/v1/travel/2/activity/33
+Content-Type: application/json
+
+{
+  "selected": true
+}
+###
+DELETE http://localhost:3000/v1/travel/2/activity/33
+###
+
+/////////////////////////////////////// ROUTES DE TRAVEL VERS TRANSPORT//////////////////////////////////////////////
+
+GET http://localhost:3000/v1/travel/1/transport
+###
+POST http://localhost:3000/v1/travel/1/transport
+Content-Type: application/json
+
+  {
+    "type": "TEST POST",
+    "company": "Agivu",
+    "from": "Boavista",
+    "to": "Falun",
+    "departure_date": "2020-03-08T09:09:44.000Z",
+    "arrival_date": "2020-05-14T16:56:15.000Z",
+    "reservation_ref": "2657",
+    "unit_price": "0",
+    "quantity": 8,
+    "memo": "Reactive",
+    "selected": false
+  }
+###
+PATCH http://localhost:3000/v1/travel/1/transport/32
+Content-Type: application/json
+
+  {
+    "selected": true
+  }
+###
+DELETE http://localhost:3000/v1/travel/1/transport/32
+###
+
+////////////////////////////////////////// ROUTES DE TRAVEL VERS TASK////////////////////////////////////////////////
+
+GET http://localhost:3000/v1/travel/3/task
+###
+POST http://localhost:3000/v1/travel/3/task
+Content-Type: application/json
+
+  {
+    "name": "TEST 5",
+    "description": "Echinocereus viridiflorus Engelm.",
+    "deadline": "2020-10-21T11:11:51.000Z",
+    "status": false
+  }
+###
+PATCH http://localhost:3000/v1/travel/3/task/17
+Content-Type: application/json
+
+  {
+    "status": true
+  }
+###
+DELETE http://localhost:3000/v1/travel/3/task/17
+###
+
+////////////////////////////////////////// ROUTES DE TRAVEL VERS TRAVELER////////////////////////////////////////////////
+
+GET http://localhost:3000/v1/travel/3/travelers
+###
+POST http://localhost:3000/v1/travel/3/traveler
+Content-Type: application/json
+
+  {
+    "traveler_id" : 1
+  }
+###
+DELETE http://localhost:3000/v1/travel/3/traveler/1
+###
+

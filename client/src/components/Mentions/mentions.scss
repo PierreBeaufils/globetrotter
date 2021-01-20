@@ -1,0 +1,23 @@
+@use 'src/styles/vars' as v;
+
+.mentions-legales-container {
+  background-color: v.$background-color;
+  max-width: v.$max-width;
+  margin: 0 auto;
+}
+
+.mentions-legales-content {
+  margin: 3rem auto;
+  width: 90%;
+  border: 1px solid rgba(121, 121, 121, .7);
+  padding: 1rem;
+
+  & p {
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .mentions-legales {
+  }
+}

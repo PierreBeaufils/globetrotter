@@ -1,0 +1,169 @@
+@use 'reset';
+@use 'vars';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: vars.$text-color;
+  background-color:white;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 90px;
+}
+
+h1 {
+  font-size: 2em; margin: .67em 0
+}
+h2 {
+  font-size: 1.5em; margin: .75em 0
+}
+h3 {
+  font-size: 1.17em; margin: .83em 0
+}
+
+.create--button {
+  margin-left: auto;
+  padding: 0.6rem;
+  background-color: rgba(64, 192, 156, 1);
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken( rgba(64, 192, 156, 0.8), 10%);
+  }
+
+  & p {
+    margin-left: 5px;
+  }
+}
+
+.main-form {
+  background-color: vars.$background-color;
+  margin: 1.2rem auto;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 10px 0 rgba(33,33,33,.1);
+  color: vars.$text-color;
+  max-width: 500px;
+
+  & h2 {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+  }
+
+  & form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
+  & select {
+    background-color: vars.$background-blue;
+    font-family: Ubuntu, sans-serif;
+    height: 36px;
+    border: 1px solid vars.$border-color;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  & input {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid vars.$border-color;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+
+  & input[type=submit] {
+    background-color: vars.$primary-color;
+    width: inherit;
+    align-self: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 45px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 12px 32px;
+    font-size: 1.02rem;
+    transition: all 300ms ease;
+
+      &:hover {
+        background-color: darken(vars.$primary-color, 10%);
+        cursor: pointer;
+      }
+  }
+  
+  & label {
+    text-align: left;
+    display: block;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  & textarea {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid vars.$border-color;
+    resize: none;
+  }
+}
+
+.warning-text {
+  color: vars.$danger-color;
+}
+.tab-mobile {
+  background-color: vars.$primary-color;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 17px;
+  margin-bottom: 0;
+  transition: all 300ms ease;
+  font-size: 1.05rem;
+}
+
+.form-error {
+  color: red;
+  font-weight: 350;
+  font-size: 1rem;
+}
+
+.required-asterisk {
+  color: red;
+  margin-left: 5px;
+}
+
+input.inputalgolia {
+  padding-right: 35px;
+}
+
+.links {
+  color: #4472B9;
+  font-weight: 300;
+  display: block;
+  margin-top: 20px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

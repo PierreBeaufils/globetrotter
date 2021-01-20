@@ -1,0 +1,36 @@
+GET http://localhost:3000/v1/travelers
+###
+GET http://localhost:3000/v1/traveler/31
+###
+POST http://localhost:3000/v1/traveler
+Content-Type: application/json
+ 
+{
+  "first_name": "AAAA",
+  "last_name": "AAAAAAAAA",
+  "role": "traveler",
+  "gender": "male",
+  "dob": "1967-12-31T23:00:00.000Z",
+  "address": "Universal real-time emulation",
+  "zipcode": "287",
+  "city": "Ketapang",
+  "phone": "+594694090422",
+  "email": "test@webnode.com",
+  "email_check": false,
+  "password": "0000",
+  "passport_number": null,
+  "expiration_date": null
+}
+###
+PATCH  http://localhost:3000/v1/traveler/31
+Content-Type: application/json
+
+{
+  "first_name": "<p>test html5</p>"
+}
+###
+DELETE http://localhost:3000/v1/traveler/31
+
+###
+GET http://localhost:3000/v1/user-travels/2
+###

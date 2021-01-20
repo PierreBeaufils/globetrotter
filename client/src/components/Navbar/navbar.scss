@@ -1,0 +1,141 @@
+@use 'src/styles/vars' as v;
+
+nav {
+  position: relative;
+  height: 10vh;
+  width: 100%;
+  background: #fff;
+  z-index: 99;
+  box-shadow: 0 1px 10px 0 rgba(33,33,33,.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  margin-left: 2rem;
+
+  &-image {
+    width: 40px;
+  }
+
+  &-title {
+    margin-left: 0.5rem;
+    color: v.$text-color;
+    font-family: 'Rubik';
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    &--color {
+      color: v.$primary-color;
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 2rem;
+  color: v.$text-color;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+
+  &:hover {
+    color: lighten(v.$text-color, 30%);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    margin-top: 4px;
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #2B7AFD;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: v.$text-color;
+    margin: 5px;
+    transition: all 300ms linear;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: rgba(255, 255, 255, 1);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4rem;
+    clip-path: circle(100px at 90% -30%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 0.5s ease-out;
+    pointer-events: none;
+  }
+
+  .nav-links.open {
+    clip-path: circle(800px at 90% -10%);
+    -webkit-clip-path: circle(800px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+
+  li.fade {
+    opacity: 1;
+  }
+}

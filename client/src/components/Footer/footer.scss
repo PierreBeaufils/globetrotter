@@ -1,0 +1,27 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(37, 37, 37, 0.8);
+  color: #fff;
+  padding: 1rem 0.2rem;
+
+  & .footer-link {
+    margin: 0.3rem 1rem;
+  }
+}
+
+@media(max-width: 600px) {
+  footer {
+
+    & .footer-link {
+      font-size: 14px;
+      margin: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+%syntax-version=1.0.0
+%project=globeTrotter
+%uri=git@github.com:O-clock-Jason/projet-voyage-voyage.git
+
+base-structure 2020-10-15T18:33:38Z Bruno <SBad973@gmail.com> # creation de la structure de base de la BDD
+views 2020-10-29T10:11:42Z Salim <bennis.salim@gmail.com> # view affichage prix global du voyage et prix globaux de chaque entité selectionnée

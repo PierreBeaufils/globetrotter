@@ -1,0 +1,38 @@
+{
+  "name": "GlobeTrotter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed": "dropdb globetrotter ; createdb globetrotter ; sqitch deploy db:pg:globetrotter  ; psql -d globetrotter -f seed/seedData.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Jason/projet-voyage-voyage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Jason/projet-voyage-voyage/issues"
+  },
+  "homepage": "https://github.com/O-clock-Jason/projet-voyage-voyage#readme",
+  "dependencies": {
+    "aws-sdk": "^2.780.0",
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.14",
+    "pg": "^8.4.1",
+    "redis": "^3.0.2",
+    "sanitize-html": "^2.1.2",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

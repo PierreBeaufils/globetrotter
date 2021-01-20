@@ -1,0 +1,9 @@
+@use 'src/styles/vars' as v;
+
+.contact-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 1rem;
+  height: 100%;
+}
